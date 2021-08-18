@@ -6,7 +6,7 @@
   <!--Inicio de sesion de Google-->
   <meta name="google-signin-scope" content="profile email">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="265799258630-h7j4esjh31t5f6sgnvvmlk4hdkge8gu1.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="265799258630-4kqc6c92jadm3am47o3m4jh2qn90o8nc.apps.googleusercontent.com">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,6 +20,11 @@
   <link href="css/styles.css" rel="stylesheet">
 
   <style>
+    .googlelogin{  
+      background-size: contain;
+      position: relative;
+      top: 15px; left: 46%;
+    }
     p{
       color: grey;
     }
@@ -43,7 +48,7 @@
 
 <body class="text-center">
 
-  
+
   <script>
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
@@ -64,20 +69,17 @@
   <!-- Formulario -->
   <form class="form-signin" action="home.html">
     <div class="">
-      <h1>Login:</h1>
+      <h3>Login e-comerce:</h3>
       <p>Para ingresar, por favor ingresa a continuacion tu direccion de correo electronico y tu contraseña de e-mercado.</p>
       <input placeholder="Correo" type="email" required><br>
       <input placeholder="Contraseña" type="password" required><br>
       <p><input type="checkbox" required> Acepto terminos y condiciones</p>
     </div>
-    <button data-theme="dark" type="submit">Ingresar</button>
+    <button type="submit">Ingresar</button>
   </form>
-  
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-
+    <h3>Login Google:</h3>
+    <div class="g-signin2 googlelogin" data-onsuccess="onSignIn"></div>
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
-  
 </body>
 </html>
