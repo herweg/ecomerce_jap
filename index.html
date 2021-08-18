@@ -6,7 +6,7 @@
   <!--Inicio de sesion de Google-->
   <meta name="google-signin-scope" content="profile email">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="265799258630-h7j4esjh31t5f6sgnvvmlk4hdkge8gu1.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="265799258630-4kqc6c92jadm3am47o3m4jh2qn90o8nc.apps.googleusercontent.com">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,12 +23,11 @@
     .googlelogin{  
       background-size: contain;
       position: relative;
-      top: 15px; left: 46%;
+      top: 0px; left: 46%;
     }
     p{
       color: grey;
     }
-    
     body{
       background: url("img/cover_back.png");
       background-size: contain;
@@ -36,19 +35,17 @@
       padding: 10%;
       background-color: rgb(248, 249, 250);
     }
-
     .form-signin{
       padding: 5%;
       padding-top: 20%;
       padding-bottom: 2%;
     }
-
   </style>
 </head>
 
 <body class="text-center">
 
-<!--
+
   <script>
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
@@ -65,7 +62,7 @@
       console.log("ID Token: " + id_token);
     }
   </script>
--->
+
   <!-- Formulario -->
   <form class="form-signin" action="home.html">
     <div class="">
@@ -77,8 +74,20 @@
     </div>
     <button type="submit">Ingresar</button>
   </form>
+<!--signin google-->
     <h3>Login Google:</h3>
     <div class="g-signin2 googlelogin" data-onsuccess="onSignIn"></div>
+<!--signout google-->
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
 </body>
