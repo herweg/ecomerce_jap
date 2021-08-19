@@ -4,9 +4,8 @@
 
 <head>
   <!--Inicio de sesion de Google-->
-  <meta name="google-signin-scope" content="profile email">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="265799258630-h7j4esjh31t5f6sgnvvmlk4hdkge8gu1.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -76,7 +75,39 @@
   </form>
 <!--signin google-->
     <h3>Login Google:</h3>
-    <div class="g-signin2 googlelogin" data-onsuccess="onSignIn"></div>
+<div id="g_id_onload"
+     data-client_id="265799258630-h7j4esjh31t5f6sgnvvmlk4hdkge8gu1.apps.googleusercontent.com"
+     data-login_uri="https://herweg.github.io"
+     data-ux_mode=”redirect”
+     data-auto_prompt="false">
+</div>
+<div class="g_id_signin"
+     data-type="standard"
+     data-size="large"
+     data-theme="outline"
+     data-text="sign_in_with"
+     data-shape="rectangular"
+     data-logo_alignment="left">
+</div>
+
+<h1>+++++++++++++++++++++++++++++++++++++++++++++++++++</h1>
+
+<div id="g_id_onload"
+     data-client_id="265799258630-h7j4esjh31t5f6sgnvvmlk4hdkge8gu1.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-login_uri="https://herweg.github.io"
+     data-auto_select="true">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="filled_black"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
 <!--signout google-->
 <a href="#" onclick="signOut();">Sign out</a>
 <script>
