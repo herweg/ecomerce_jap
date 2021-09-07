@@ -6,6 +6,18 @@
     font-weight: bold;
 }
 
+.form-signin{
+  padding: 5%;
+  padding-top: 20%;
+  padding-bottom: 2%;
+}
+
+.googlelogin{  
+  background-size: contain;
+  position: relative;
+  top: 0px; left: 46%;
+}
+
 .jumbotron {
   height: 50vh;
   padding: 5em inherit;
