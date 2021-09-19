@@ -151,3 +151,14 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+#estrellas {
+  padding-top: 5px;
+  width: 6%;
+}
+#comentario{
+  margin-top: 10px;
+}
+#correo {
+  margin: 5px;
+}

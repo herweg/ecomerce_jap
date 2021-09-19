@@ -61,7 +61,7 @@ function showProductsList() {
                             <small class="text-muted">` + producto.soldCount + ` artículos</small>
                         </div>
                         <p class="mb-1">` + producto.description + `</p>
-                        <p id="costo" class="mb-1">` + producto.currency + ": " + producto.cost + `</p>
+                        <p class="mb-1">` + producto.currency + ": " + producto.cost + `</p>
                     </div>
                 </div>
             </a>
@@ -145,30 +145,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 //////////////////////
 //Mi propio buscador//
 //////////////////////
-const buscador = document.getElementById("buscadorProductos");
-const botonBuscador = document.getElementById("buscador");
-//const nombre = producto.name
 
-buscador.addEventListener("keyup", (e)=>{
-    //console.log(buscador.value)
-    if(buscador.value === producto.name){
-        document.getElementById("cat-list-container").innerHTML += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + producto.imgSrc + `" alt="` + producto.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ producto.name + `</h4>
-                            <small class="text-muted">` + producto.soldCount + ` artículos</small>
-                        </div>
-                        <p class="mb-1">` + producto.description + `</p>
-                        <p class="mb-1">` + producto.currency + ": " + producto.cost + `</p>
-                    </div>
-                </div>
-            </a>
-            `
-    }
-});
+
+
 */
