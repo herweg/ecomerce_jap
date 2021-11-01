@@ -162,3 +162,116 @@ a.custom-card:hover {
 #correo {
   margin: 5px;
 }
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.botoncito {
+  text-align: center;
+  border-radius: 33px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  color: #343a40 !important;
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(48, 93, 155, 0.452);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #ddd2;} */
+
+#carrusel{
+  width: 70%;
+}
+
+.cartContainer{
+  display: flex;
+}
+
+.imagenCarrito{
+  width: 100px;
+  border-radius: 5px;
+}
+
+.carrito{
+  display: flex;
+  padding-left: 50px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+.carrito:hover{
+  background-color: cornflowerblue;
+}
+
+.cartContent{
+  padding-left: 30px;
+  margin: auto 0;
+}
+
+.cartDelete{
+  margin: auto;
+}
+
+.contenedor{
+  margin: 20px 10%;
+  border-radius: 5px;
+}
+
+#envio{
+  background-color: rgba(136, 136, 136, 0.767);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+#envioForm{
+  width: 300px;
+  padding-left: 90px;
+}
+
+#envioForm input{
+  border-radius: 3px;
+  display: inline-block;
+  margin: 5px 0px 0px 20px;
+}
+
+#envioFormBTN{
+  margin: 100% 0 0 30%;
+}
+
+#micarrito{
+  margin: auto;
+}

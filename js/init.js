@@ -5,6 +5,7 @@ const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json
 const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
+const CART_INFO2_URL = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 var showSpinner = function(){
@@ -44,17 +45,17 @@ function checkLogin(){
     if(sessionStorage.getItem("usuario") === null){
       window.location = "login.html";
     }
-}
+};
 
 function logOut(){
     alert("Hasta luego " + sessionStorage.getItem("usuario"))  
     sessionStorage.removeItem("usuario");
-    
+};
     //sessionStorage.clear();
     //localStorage.clear();
     //ola="../ecomerce/login.html"
     //window.location.href=ola
-}
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los

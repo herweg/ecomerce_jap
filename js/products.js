@@ -6,10 +6,9 @@ var currentSortCriteria = undefined;
 var minCount = undefined;
 var maxCount = undefined;
 
-//Define criterios de busqueda
 function sortProducts(criteria, array) {
     let result = [];
-    //console.log(result);
+
     //Criterios por precio y relevancia
     if (criteria === ORDER_ASC_BY_PRICE) {
         result = array.sort(function (a, b) {
@@ -40,7 +39,7 @@ function sortProducts(criteria, array) {
 function showProductsList() {
 
     let agregaHTML = "";
-    //recorre el arreglo dado
+
     for (let i = 0; i < currentCategoriesArray.length; i++) {
         let producto = currentCategoriesArray[i];
 
@@ -48,31 +47,27 @@ function showProductsList() {
         if (((minCount == undefined) || (minCount != undefined && parseInt(producto.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(producto.cost) <= maxCount))) {
 
-            //pinta html
             agregaHTML += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + producto.imgSrc + `" alt="` + producto.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ producto.name + `</h4>
-                            <small class="text-muted">` + producto.soldCount + ` artículos</small>
-                        </div>
-                        <p class="mb-1">` + producto.description + `</p>
-                        <p class="mb-1">` + producto.currency + ": " + producto.cost + `</p>
-                    </div>
+            <div class="col-md-4">
+              <a href="product-info.html" class="card mb-4 custom-card">
+                <img src="` + producto.imgSrc + `" alt="` + producto.description + `">
+                <h3 class="m-3">`+ producto.name + `</h3>
+                <div class="card-body">
+                  <p class="card-text">` + producto.description + `</p>
+                  <p class="card-text">` + producto.currency + ": " + producto.cost + `</p>
+                  <small class="text-muted">` + producto.soldCount + ` artículos</small>
                 </div>
-            </a>
+              </a>
+            </div>
             `
         }
 
-        document.getElementById("cat-list-container").innerHTML = agregaHTML;
+        document.getElementById("lista-productos").innerHTML = agregaHTML;
     }
 };
 
 function sortAndShowProducts(sortCriteria, categoriesArray) {
+
     currentSortCriteria = sortCriteria;
 
     if (categoriesArray != undefined) {
@@ -145,7 +140,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
 //////////////////////
 //Mi propio buscador//
 //////////////////////
-
-
 
 */

@@ -30,11 +30,7 @@
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-  crossorigin="anonymous"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
@@ -45,19 +41,63 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="saludo"></a>
-      <a class="py-2 d-none d-md-inline-block" onclick="logOut()" href="login.html" id="logout">Logout</a>
-    </div>
+      <div class="dropdown">
+        <a class="dropbtn py-2 d-none d-md-inline-block" id="saludo"></a>
+        <div class="dropdown-content">
+          <a class="dropbtn botoncito" href="cart.html">Mi carrito</a>
+          <a class="dropbtn botoncito" href="my-profile.html">Mi cuenta</a>
+          <a class="dropbtn botoncito" onclick="logOut()" href="login.html" id="logout">Logout</a>
+        </div>
+      </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main>
+    <div class="container">
+      <div class="contenedor">
+        <div class="text-center p-4">
+          <h2>Mi carrito</h2>
+          <p class="lead">No se por que aparece el [object Object] aca :( <-- </p>
+        </div>
+        <div>
+          <!-- <p>Elegi tu tipo de moneda preferido</p>
+          <input type="radio" name="moneda" id="UYU" checked>UYU
+          <input type="radio" name="moneda" id="USD">USD (Cotizacion Dolares al dia de hoy UYU*40.00) -->
+        </div>
+        <div id="micarrito">
+          <!-- <a data-toggle="collapse" href="#collapse1">Panel</a> -->
+          <!-- aca va la info de la lista -->
+        </div>
+      </div>
+      <div class="contenedor" style="height: 300px;">
+        <div id="envio">
+          <!-- subtotal -->
+          <p>Subtotal: UYU <span id="subtotalGral"></span></p>
+          <!-- <p id="total">Total: </p> -->
+        </div>
+        <div style="display: flex;">
+          <div id="envioForm">
+            <h4>Envio</h4>
+            <input type="text" placeholder="Calle" required>
+            <input type="text" placeholder="Numero" required>
+            <input type="text" placeholder="Esquina" required>
+            <input type="text" placeholder="Pais" required>
+          </div>
+          <div>
+            <button id="envioFormBTN">Enviar</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
+  <footer class="text-muted bg-light">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
